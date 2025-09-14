@@ -1,46 +1,46 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: lightblue;
 }
 
-.logo{
+.logo {
     width: 145px;
     height: 125px;
-    margin:15px 15px;
+    margin: 15px 15px;
 }
 
-header{
+header {
     display: flex;
-    align-items: center; 
+    align-items: center;
     background-color: beige;
 }
 
-.barra{
+.barra {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-left: 70px;
     list-style: none;
-    
-    
+
+
 }
 
 
-.cuenta{
+.cuenta {
     margin: 10px;
-   
+
 }
 
-.cuentaDos{
+.cuentaDos {
     text-decoration: none;
     color: lightblue;
     font-size: 20px;
 }
 
-.buscador{
+.buscador {
     display: flex;
     align-items: center;
     margin-left: 80px;
@@ -54,29 +54,109 @@ header{
     color: white;
     padding: 8px;
     border: 1px solid lightblue;
-  }
-  
-  .buscador button {
+}
+
+.buscador button {
     border: none;
     color: lightblue;
     font-size: 14px;
-    background-color: beige ;
-  }
+    background-color: beige;
+}
 
 
-  footer{
+footer {
     margin-top: 70px;
     display: flex;
     justify-content: start;
     width: 100%;
     background-color: beige;
-  }
+}
 
-  .nombres{
-    
+.nombres {
+
     color: lightblue;
     font-size: 20px;
-    
-  }
 
-  
+}
+
+.logoLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.mainLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formLogin {
+    background-color: beige;
+    margin-top: 35px;
+    width: 30%;
+    align-items: center;
+    padding: 50px;
+    border-radius: 25px;
+    flex-wrap: wrap;
+}
+
+.inicioH2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.emailContra{
+    display: block;
+    
+    width: 100%;
+}
+
+.labelForm{
+    font-weight: bold;
+}
+
+.emailinput{
+   padding: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border:2px solid rgb(212, 149, 160);
+   width: 100%;
+}
+
+.buttonLogin {
+    background-color: lightblue;
+    color: rgb(212, 149, 160);
+    padding: 6px;
+    width: 100%;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.noCuenta {
+    text-decoration: none;
+    color: rgb(212, 149, 160);
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.checkbox_registro{
+    margin: 10px 10px;
+}
+
+.checkboxRegister{
+    
+    width: 15px;
+    height: 15px;
+}
+
