@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.logo{
+    width: 145px;
+    height: 125px;
+    margin:15px 15px;
+}
+
+header{
+    display: flex;
+    align-items: center; 
+    background-color: beige;
+}
+
+.barra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 70px;
+    list-style: none;
+    
+    
+}
+
+
+.cuenta{
+    margin: 10px;
+   
+}
+
+.cuentaDos{
+    text-decoration: none;
+    color: lightblue;
+    font-size: 20px;
+}
+
+.buscador{
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    padding: 5px 15px;
+    border: 1px solid lightblue;
+    padding: 5px 15px;
+}
+
+.buscador input {
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+    border: 1px solid lightblue;
+  }
+  
+  .buscador button {
+    border: none;
+    color: lightblue;
+    font-size: 14px;
+    background-color: beige ;
+  }
+
+
+  footer{
+    margin-top: 70px;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    background-color: beige;
+  }
+
+  .nombres{
+    
+    color: lightblue;
+    font-size: 20px;
+    
+  }
+
+  
