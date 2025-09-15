@@ -4,6 +4,8 @@
 
 body {
     background-color: lightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
 .logo {
@@ -72,6 +74,7 @@ header {
     font-weight: bold;
     margin: 15px 15px;
     margin-top: 15px;
+    
 
 }
 
@@ -102,6 +105,48 @@ header {
     text-decoration: none;
      margin-bottom: 10px;
      padding: 5px;
+}
+
+main{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.aleatorios{
+    margin-left: 50px;
+    color:rgb(212, 149, 160); 
+    font-weight: bold;
+
+}
+
+
+.productosRandom{
+    flex-wrap: wrap;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    height: 100%;
+    flex-direction: row;
+   
+   
+
+}
+
+.producto{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: beige;
+} 
+
+
+.fotos{
+    width: 120px;
 }
 
 
