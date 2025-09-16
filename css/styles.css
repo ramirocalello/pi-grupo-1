@@ -282,3 +282,64 @@ footer {
     margin-left: 10px;
 
 }
+.product{
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    border: 2px solid rgb(212, 149, 160);
+    border-radius: 10px;
+}
+.pproduct{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+
+    
+    
+}
+.imgproduct{
+   display: flex;
+   align-self: center;
+   height: 400px;
+}
+.nombre{
+    font-size: 30px;
+    margin-bottom: 0px;
+    
+}
+.marca{
+    margin-top: 0px;
+    
+}
+.info{
+    flex-wrap: wrap;
+    display: flex;
+    
+    
+    flex-direction: column;
+    width: 100%;
+
+}
+.descripcion{
+    max-width: 800px;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: justify;
+}
+.datos{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+.review{
+    
+     width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    padding: 15px;
+    
+}
