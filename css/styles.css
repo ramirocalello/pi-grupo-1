@@ -273,6 +273,8 @@ footer {
     justify-content: start;
     width: 100%;
     background-color: beige;
+    border-radius: 10px;
+    border: 2px solid rgb(212, 149, 160);
 }
 
 .nombres {
@@ -350,4 +352,39 @@ footer {
 }
 .categoria{
     color: black;
+}
+.category{
+    margin-left: 50px;
+    color:#6A0DAD; 
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+.cuerpoc{
+    flex-wrap: wrap;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    flex-direction: row;
+    max-height: 1100px;
+}
+.maincategory{
+     width: 975px;
+     flex-direction: column;
+}
+.bcategory{
+    display: flex;
+    flex-direction: row;
+}
+.productoc{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: beige;
+    height: 380px;
+    justify-content: space-between;
+    border-radius: 6px;
+    margin-left: 30px;
+    width: 240px;
 }
