@@ -197,6 +197,8 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 78%;
+    flex-direction: column;
 }
 
 .formLogin {
@@ -399,3 +401,26 @@ footer {
     margin-left: 40px;
     color: #6A0DAD;
 }
+
+.barraCostadoLogin{
+    background-color: beige;
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    border: 2px solid rgb(212, 149, 160);
+    margin-top: 10px;
+    height: 100%;
+}
+
+.bcategoryLogin{
+    display: flex;
+    flex-direction: row;
+    width: 18%;
+}
+
+.vistaLogin{
+    display: flex;
+    height: 100%;
+}
+
+
