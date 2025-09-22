@@ -491,6 +491,8 @@ footer {
 
     }
 
+    /* RESPONSIVE INDEX */
+
     .bodyIndex {
         width: 420px;
     }
@@ -550,4 +552,51 @@ footer {
         align-self: flex-end;
         margin-top: 1000px;
     }
+
+    /* RESPONSIVE LOGIN & REGISTER */
+
+    .bodyLogin{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bcategoryLogin{
+        width: 420px;
+        height: 1108px;
+    }
+    
+    .vistaLogin{
+        width: 420px;
+        height: 2000px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainLogin{
+        width: 420px;
+        display: flex;
+        
+    }
+
+    .logoLogin{
+        width: 400px;
+    }
+
+    .formLogin{
+        width: 410px;
+    }
+
+
+    .barraCostadoLogin {
+        width: 420px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    /* RESPONSIVE SEARCH-RESULTS */
+
+    
 }
