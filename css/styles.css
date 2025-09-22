@@ -406,10 +406,7 @@ footer {
     flex-direction: column;
 }
 
-.bcategory {
-    display: flex;
-    flex-direction: row;
-}
+
 
 .productoc {
     display: flex;
@@ -491,7 +488,7 @@ footer {
 
     }
 
-    /* RESPONSIVE INDEX */
+    /* RESPONSIVE INDEX & SEARCH-RESULTS */
 
     .bodyIndex {
         width: 420px;
@@ -596,7 +593,48 @@ footer {
         align-content: center;
     }
 
-    /* RESPONSIVE SEARCH-RESULTS */
+    /* RESPONSIVE CATEGORIAS */
+
+    .bcategory{
+        width: 420px;
+        max-width: 420px;
+    }
+
+    .cuerpoc{
+        display: flex;
+        width: 420px;
+    }
+
+    .productoc{
+        margin-bottom: 10px;
+    }
+
+    /* Responsive Product */
+
+    .product{
+        display: flex;
+        flex-direction: column;
+        width: 420px;
+        margin-left: 0px;
+    }
+
+    .imgproduct{
+        width: 300px;
+        height: 225px;
+        margin-top: 10px;
+    }
+
+    .descripcion{
+        font-size: 18px;
+    }
+
+    .revieww{
+        margin-bottom: 10px;
+    }
 
     
+
+    
+    
+
 }
