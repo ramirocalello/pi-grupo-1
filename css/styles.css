@@ -5,7 +5,8 @@
 body {
     background-color: lightblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    box-sizing: border-box;
+    width: 100vw;
 }
 
 .logo {
@@ -279,7 +280,7 @@ footer {
     border: 2px solid rgb(212, 149, 160);
 }
 
-.footerIndex{
+.footerIndex {
     margin-top: 70px;
     display: flex;
     justify-content: start;
@@ -459,7 +460,8 @@ footer {
 
 @media (max-width: 420px) {
     body {
-        width: 420px;
+        max-width:420px;
+        width: 100%;
     }
 
     .bodyIndex {
@@ -486,6 +488,11 @@ footer {
         width: 300px;
         margin-top: 30px;
 
+    }
+
+    footer{
+        width: 100%;
+        max-width: 420px;
     }
 
     /* RESPONSIVE INDEX & SEARCH-RESULTS */
@@ -548,38 +555,40 @@ footer {
         display: flex;
         align-self: flex-end;
         margin-top: 1000px;
+        width: 100%;
+        max-width: 420px;
     }
 
     /* RESPONSIVE LOGIN & REGISTER */
 
-    .bodyLogin{
+    .bodyLogin {
         display: flex;
         flex-direction: column;
     }
 
-    .bcategoryLogin{
+    .bcategoryLogin {
         width: 420px;
         height: 1108px;
     }
-    
-    .vistaLogin{
+
+    .vistaLogin {
         width: 420px;
-        height: 2000px;
+      
         display: flex;
         flex-direction: column;
     }
 
-    .mainLogin{
+    .mainLogin {
         width: 420px;
         display: flex;
-        
+
     }
 
-    .logoLogin{
+    .logoLogin {
         width: 400px;
     }
 
-    .formLogin{
+    .formLogin {
         width: 410px;
     }
 
@@ -595,46 +604,72 @@ footer {
 
     /* RESPONSIVE CATEGORIAS */
 
-    .bcategory{
-        width: 420px;
+    .bcategory {
+        width: 100%;
         max-width: 420px;
     }
 
-    .cuerpoc{
+    .cuerpoc {
         display: flex;
-        width: 420px;
+        width: 100%;
     }
 
-    .productoc{
+    .bodyCategory {
+        max-width: 420px;
+        margin: 5px;
+        padding: 5px;
+        width: 100vw;
+        margin-right: 0px;
+        margin-left: 0px;
+        
+    }
+
+    .productoc {
         margin-bottom: 10px;
+    }
+
+    .contenedor{
+        display: block;
+        width: 100%;
+    }
+
+    .maincategory{
+        width: 100%;
+        margin-left: 0px;
     }
 
     /* Responsive Product */
 
-    .product{
+    .product {
         display: flex;
         flex-direction: column;
         width: 420px;
         margin-left: 0px;
     }
 
-    .imgproduct{
+    .imgproduct {
         width: 300px;
         height: 225px;
         margin-top: 10px;
     }
 
-    .descripcion{
+    .descripcion {
         font-size: 18px;
     }
 
-    .revieww{
+    .revieww {
         margin-bottom: 10px;
     }
 
     
 
     
+
     
+
+
+
+
+
 
 }
