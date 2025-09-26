@@ -6,7 +6,9 @@ body {
     background-color: lightblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
+    margin: 0px;
+    padding: 4px;
 }
 
 .logo {
@@ -138,6 +140,7 @@ main {
 .productosRandom {
     flex-wrap: wrap;
     margin: 20px;
+    margin-right: 0px;
     display: flex;
     justify-content: flex-start;
     width: 170px;
@@ -460,8 +463,8 @@ footer {
 
 @media (max-width: 420px) {
     body {
-        max-width:420px;
-        width: 100%;
+       
+        width: 420px;
     }
 
     .bodyIndex {
@@ -491,8 +494,7 @@ footer {
     }
 
     footer{
-        width: 100%;
-        max-width: 420px;
+        width: 420px;
     }
 
     /* RESPONSIVE INDEX & SEARCH-RESULTS */
@@ -514,21 +516,24 @@ footer {
         width: 205px;
     }
 
+    .tituloProducto{
+        width: 380px;
+    }
+
     .mainIndex {
         max-width: 420px;
-        width: 420px;
+       
         display: flex;
         flex-wrap: wrap;
         margin: 0px;
     }
 
-    .productosRandom,
-    .producto {
+    .productosRandom {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        width: 420px;
-        justify-content: space-evenly;  
+        width: 380px;
+        justify-content: flex-start;  
 
     }
 
@@ -547,15 +552,15 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        width: 420px;
-        justify-content: space-evenly;
+        width: 380px;
+        justify-content: flex-start;
     }
 
     .footerIndex {
         display: flex;
         align-self: flex-end;
         margin-top: 1000px;
-        width: 100%;
+        width: 420px;
         max-width: 420px;
     }
 
@@ -611,21 +616,17 @@ footer {
 
     .cuerpoc {
         display: flex;
-        width: 100%;
+        width: 390px;
+        margin: 0px;
+
     }
 
-    .bodyCategory {
-        max-width: 420px;
-        margin: 5px;
-        padding: 5px;
-        width: 100vw;
-        margin-right: 0px;
-        margin-left: 0px;
-        
-    }
+    
 
     .productoc {
         margin-bottom: 10px;
+        margin-left: 7px;
+        margin-right: 0px;
     }
 
     .contenedor{
