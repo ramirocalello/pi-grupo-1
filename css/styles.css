@@ -528,7 +528,7 @@ footer {
         flex-wrap: wrap;
         flex-direction: row;
         width: 420px;
-        justify-content: space-evenly;
+        justify-content: space-evenly;  
 
     }
 
@@ -570,7 +570,7 @@ footer {
         width: 420px;
         height: 1108px;
     }
-
+    
     .vistaLogin {
         width: 420px;
       
@@ -581,7 +581,7 @@ footer {
     .mainLogin {
         width: 420px;
         display: flex;
-
+        
     }
 
     .logoLogin {
@@ -664,8 +664,8 @@ footer {
     
 
     
-
     
+
 
 
 
