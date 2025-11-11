@@ -43,7 +43,61 @@ fetch(url_category)
         console.log("error" + error);
     })
     
+let url_home='https://dummyjson.com/products'
+let random= document.querySelector(".productosRandom")
+
+fetch(url_home)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    let dp= data.products
+    let productos= ""
+    for (let i = 0; i < 10; i++) {
+        const element = dp[i];
+        console.log(element.productos)
+        productos+= `<article class="producto">
+                    <a href="./product.html?id=${element.id}"><img class="fotos" src=${element.images[0]} alt=""></a>
+                    <h3>${element.title}</h3>
+                    <p>${element.description}</p>
+                    <h4>${element.price}</h4>
+                    <a class="detalle" href="./product.html?id=${element.id}">Ver detalle</a>
+                </article>`
+        
+    }
+    random.innerHTML= productos
+
+})
+.catch(function(error){
+    console.log("Error:"+error);
+})
+let destacado= document.querySelector(".productosDestacados")
+
+fetch(url_home)
+.then(function(response){
+    return response.json()
+})
+.then(function(data){
+    let dp2= data.products
+    let productos2= ""
+    for (let i = 10; i < 20 && i < dp2.length; i++) {
+        const element = dp2[i];
+        console.log(element.productos2)
+        productos2+= `<article class="producto">
+                    <a href="./product.html?id=${element.id}"><img class="fotos" src=${element.images[0]} alt=""></a>
+                    <h3>${element.title}</h3>
+                    <p>${element.description}</p>
+                    <h4>${element.price}</h4>
+                    <a class="detalle" href="./product.html?id=${element.id}">Ver detalle</a>
+                </article>`
+        
+    }
+    destacado.innerHTML= productos2
+    
 
 
-
+})
+.catch(function(error){
+    console.log("Error:"+error);
+})
 
