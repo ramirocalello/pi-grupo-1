@@ -359,11 +359,33 @@ footer {
     text-align: justify;
 }
 
-.datos {
+.precio {
     margin-top: 0px;
     font-size: 20px;
     margin-left: 10px;
+    font-weight: bold;
+}
 
+.categoriaJS{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.stock{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.tags{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .review {
@@ -492,6 +514,8 @@ footer {
         margin-top: 30px;
 
     }
+
+
 
     footer{
         width: 420px;

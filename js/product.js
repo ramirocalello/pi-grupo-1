@@ -42,3 +42,44 @@ fetch(url_category)
     .catch(function(error){
         console.log("error" + error);
     })
+
+
+let queryString = location.search
+let queryStringID = new URLSearchParams(queryString);
+let qID = queryStringID.get("id")
+let url_product = `https://dummyjson.com/products/${qID}` 
+let nombre = document.querySelector(".nombre") 
+let marca = document.querySelector(".marca")
+let descripcion = document.querySelector(".descripcion")
+let precio = document.querySelector(".precio")
+let categoriaJS = document.querySelector(".categoriaJS")
+let stock = document.querySelector(".stock")
+let img = document.querySelector(".imgproduct")
+let tags = document.querySelector(".tags")
+
+fetch(url_product)
+    .then(function (response) {
+       return response.json()
+    })
+    .then(function (data) {
+      console.log(data.category)
+      let categorias2 = data.category
+      let link = ""
+      for (let i = 0; i < 1; i++) {
+        const element = categorias2[i]; 
+        link += `<a  href="category.html">Categoria: ${data.category}</a>`
+      }
+
+      nombre.innerText = data.title;
+      marca.innerText = `Marca: ${data.brand}`;
+      descripcion.innerText = data.description;
+      precio.innerText = `Precio: ${data.price}`;
+      categoriaJS.innerHTML = link
+      stock.innerText = `Stock: ${data.stock}`
+      img.src = data.images[0];
+      tags.innerText = `Tags: ${data.tags}`;
+      
+    })
+    .catch(function(error){
+        console.log("error" + error);
+    }) 
