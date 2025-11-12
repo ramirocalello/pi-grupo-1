@@ -57,16 +57,19 @@ let stock = document.querySelector(".stock")
 let img = document.querySelector(".imgproduct")
 let tags = document.querySelector(".tags")
 
+
 fetch(url_product)
     .then(function (response) {
        return response.json()
     })
     .then(function (data) {
+      console.log(data)
       console.log(data.category)
       let categorias2 = data.category
       let link = ""
       for (let i = 0; i < 1; i++) {
         const element = categorias2[i]; 
+        console.log(element.category)
         link += `<a  href="category.html">Categoria: ${data.category}</a>`
       }
 
