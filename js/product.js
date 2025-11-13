@@ -30,7 +30,7 @@ fetch(url_category)
         const categoria = data[i];
 
         console.log(categoria);
-        contenido += `<li class="listaCategoria"><a class="textoCategoria" href="category.html">${categoria}</a></li>`
+        contenido += `<li class="listaCategoria"><a class="textoCategoria" href="category.html?category=${categoria}">${categoria}</a></li>`
         
     }
 
@@ -74,7 +74,7 @@ fetch(url_product)
       let link = ""
       for (let i = 0; i < 1; i++) {
         const element = categorias2[i]; 
-        link += `<a  href="category.html">Categoria: ${data.category}</a>`
+        link += `<a  href="category.html?category=${data.category}">Categoria: ${data.category}</a>`
       }
       let reseñas = data.reviews;
       

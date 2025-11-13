@@ -30,7 +30,7 @@ fetch(url_category)
         const categoria = data[i];
 
         console.log(categoria);
-        contenido += `<li class="listaCategoria"><a class="textoCategoria" href="category.html">${categoria}</a></li>`
+        contenido += `<li class="listaCategoria"><a class="textoCategoria" href="category.html?category=${categoria}">${categoria}</a></li>`
         
     }
 
