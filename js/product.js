@@ -56,7 +56,12 @@ let categoriaJS = document.querySelector(".categoriaJS")
 let stock = document.querySelector(".stock")
 let img = document.querySelector(".imgproduct")
 let tags = document.querySelector(".tags")
-
+let revieww = document.querySelector(".revieww")
+let rating = document.querySelector(".rating")
+let comentario = document.querySelector(".comentario")
+let fecha = document.querySelector(".fecha")
+let nombreUsuario = document.querySelector(".nombreUsu")
+let mailUsu = document.querySelector(".emailUsu")
 
 fetch(url_product)
     .then(function (response) {
@@ -69,10 +74,22 @@ fetch(url_product)
       let link = ""
       for (let i = 0; i < 1; i++) {
         const element = categorias2[i]; 
-        console.log(element.category)
         link += `<a  href="category.html">Categoria: ${data.category}</a>`
       }
-
+      let reseñas = data.reviews;
+      
+      let texto = "";
+      for (let i = 0; i < 3; i++) {
+        const element = reseñas[i];
+        texto += `<div class="review">
+                    <p class="rating">${element.rating}</p>
+                    <p class="comentario">${element.comment}</p>
+                    <p class="fecha">${element.date}</p>
+                    <p class="nombreUsu">${element.reviewerName}</p>
+                    <p class="emailUsu">${element.reviewerEmail}</p>
+                </div>`
+      }
+      
       nombre.innerText = data.title;
       marca.innerText = `Marca: ${data.brand}`;
       descripcion.innerText = data.description;
@@ -81,6 +98,9 @@ fetch(url_product)
       stock.innerText = `Stock: ${data.stock}`
       img.src = data.images[0];
       tags.innerText = `Tags: ${data.tags}`;
+      revieww.innerHTML = `
+                        <h3>Opiniones de usuarios</h3>
+                        ${texto};`
       
     })
     .catch(function(error){
