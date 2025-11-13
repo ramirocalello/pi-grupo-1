@@ -88,17 +88,37 @@ fetch(url_product)
 
 
 let queryStringID2 = new URLSearchParams(queryString)
-let qID2 = queryStringID2.get("categoriaJS")
+let qID2 = queryStringID2.get("products")
 let url_categorias = `https://dummyjson.com/products/category/${qID2}`
 let tituloCategory = document.querySelector(".category")
+let contenedor = document.querySelector(".cuerpoc")
 fetch(url_categorias)
      .then(function (response) {
         return response.json()
      })
      .then(function (data){
+        let productos = data.products
+        let elContenido = ""
         console.log(data)
-        
 
-        tituloCategory.innerText = data.title
+        for (let i = 0; i < productos.length; i++) {
+            const element = productos[i];
+            elContenido += ` <div class="productoc">
+                        <a href="./product.html?productId=${element.id}"><img class="fotos" src=" ${element.images}" alt=""></a>
+                        <h3> ${element.title}</h3>
+                        <p>${element.description}</p>
+                        <h4>${element.price}</h4>
+                        <a class="detalle" href="./product.html?productId=${element.id}">Ver detalle</a>
+                    </div>`
+            
+        }
+
+     
+        
+        tituloCategory.innerText = qID2
+        contenedor.innerHTML = elContenido
      })
+     .catch(function(error){
+        console.log("error" + error);
+    }) 
 
