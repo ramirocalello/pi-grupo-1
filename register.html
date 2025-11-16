@@ -49,17 +49,20 @@
                 <div class="emailContra">
                     <label class="labelForm" for="email">Email</label>
                     <br>
-                    <input class="emailinput" type="email" name="email" id="email" value="" required>
+                    <input class="emailinput" type="email" name="email" id="email" value="" >
+                    <div class="invalid-feedback email"></div>
                 </div>
                 <div class="emailContra">
                     <label class="labelForm" for="contraseña">Contraseña</label>
                     <br>
-                    <input class="emailinput" type="password" name="user" id="password" value="" required>
+                    <input class="emailinput" type="password" name="user" id="password" value="" >
+                     <div class="invalid-feedback password"></div>
                 </div>
                 <div class="emailContra">
                     <label class="labelForm" for="contraseña"> Repetir contraseña</label>
                     <br>
-                    <input class="emailinput" type="password" name="user" id="password" value="" required>
+                    <input class="emailinput" type="password" name="user" id="passwordRe" value="" >
+                     <div class="invalid-feedback rePassword"></div>
                 </div>
                 <div class="checkbox_registro">
                     <input class="checkboxRegister" type="checkbox" name="terminos" id="cajaTermino" required>
@@ -79,6 +82,8 @@
     </footer>
 
     <script src="./js/register.js"></script>
+    <script src="./js/saludo.js"></script>
+    <script src="./js/logout.js"></script>
 
 </body>
 
