@@ -582,7 +582,6 @@ footer {
     .footerIndex {
         display: flex;
         align-self: flex-end;
-        margin-top: 1000px;
         width: 420px;
         max-width: 420px;
     }

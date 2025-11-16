@@ -42,3 +42,46 @@ fetch(url_category)
     .catch(function(error){
         console.log("error" + error);
     })
+
+let mail= document.querySelector("#email")
+let contra= document.querySelector("#password")
+let feedmail= document.querySelector(".invalid-feedback.email")
+let feedcontra= document.querySelector(".invalid-feedback.password")
+let formulario= document.querySelector(".formLogin")
+
+formulario.addEventListener("submit", function(event){
+    event.preventDefault()
+    if (mail.value == ""){
+        feedmail.style.display= "inline"
+        feedmail.innerText= "No hay datos en este campo"
+        return false
+
+    }
+    if (contra.value == ""){
+        feedcontra.style.display= "inline"
+        feedcontra.innerText= "No hay datos en este campo"
+        return false
+    }
+    else if(contra.value.length <= 6){
+        feedcontra.style.display= "inline"
+        feedcontra.innerText= "Debe tener mas de 6 caracteres"
+        return false
+        
+    }
+    
+    let user= {
+        email: this.email.value,
+        user: this.user.value
+    }
+    let userString = JSON.stringify(user);
+
+    localStorage.setItem("miClave", userString);
+    
+    this.submit()
+
+})
+feedcontra.style.color= "red"
+feedmail.style.color= "red"
+
+
+
