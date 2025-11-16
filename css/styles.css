@@ -481,6 +481,16 @@ footer {
     max-height: 1100px;
 }
 
+.bienvenida{
+    display: flex;
+    margin-left: 40px;
+    flex-direction: column;
+    
+}
+.mensaje{
+    font-size: 20px;
+}
+
 
 @media (max-width: 420px) {
     body {
@@ -684,7 +694,7 @@ footer {
         margin-bottom: 10px;
         margin-left: 25px;
     }
-
+    
     
 
     
