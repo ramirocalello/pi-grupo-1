@@ -7,7 +7,7 @@ if (info) {
   saludo.innerText = `Bienvenido ${info.email}`;
   mensaje.innerText = "Disfruta de la App."
   barra.innerHTML = ` <li> Bienvenido: ${info.email} </li>
-                      <li><a href="./login.html"> Logout</a></li>`
+                      <li class = "logout" ><a id="logout-link" href="./login.html"> Logout</a></li>`
 }
 else{
   alert("No se guardaron bien los datos");
