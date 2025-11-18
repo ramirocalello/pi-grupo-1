@@ -86,51 +86,51 @@ fetch(url_product)
         console.log("error" + error);
     })
 
-let barrita = document.querySelector(".barrita")
-let urlSearch = 'https://dummyjson.com/products'
-let titulo = document.querySelector(".aleatorios")
-let search = document.querySelector(".search")
-let random = document.querySelector(".productosRandom")
+let query = new URLSearchParams(location.search);
+let termino = query.get("buscador");
+let resultado = document.querySelector(".aleatorios");
+let vacio= document.querySelector(".search");
+let contenedor = document.querySelector(".productosRandom");
 
-if (qID){
-    titulo.innerText = `Resultados de busqueda sobre: <br> ${busqueda}`
-    }
-        else{
-            titulo.innerText = "No se proporcionó un término de búsqueda."
-   }
 
-        fetch(urlSearch)
-        .then(function (response) {
-            return response.json()
+resultado.innerHTML = `Resultados de búsqueda para: <br> ${termino}`;
+
+let urlSearch = `https://dummyjson.com/products/search?q=${termino}`;
+
+
+fetch(urlSearch)
+    .then(function (response) {
+        return response.json()
     })
-        .then(function (data) {
-            console.log(data)
-        let productos= data.products
-        let resultado= ""
-        let busqueda= barrita.value
+    .then(function (data) {
+        
+        let productos = data.products
+        let infoSearch = "";
 
+        if (productos.length == 0) {
+            vacio.innerText = `No hay resultados para el término: ${termino}`;
+            contenedor.innerHTML = "";
+            return
+        }
 
-        for (let i = 0; i < productos.length; i++){
-            const element = productos[i];
+        vacio.innerText = ""; 
 
+        for (let i = 0; i < productos.length; i++) {
+            const p = productos[i];
 
-                if (barrita.value == element){
-                    resultado += `
-                    <article class="producto">
-                        <a href="./product.html?id=${element.id}"><img class="fotos" src=${element.images[0]} alt=""></a>
-                        <h3>${element.title}</h3>
-                        <p>${element.description}</p>
-                        <h4>${element.price}</h4>
-                        <a class="detalle" href="./product.html?id=${element.id}">Ver detalle</a>
-                    </article>`
-                    titulo.innerText += `Resultados de busqueda sobre: <br> ${busqueda}`
-                    search.innerText= ""
-                }
-                   
-            
-            }
-       random.innerHTML= resultado
+            infoSearch += `<article class="producto">
+                    <a href="./product.html?id=${p.id}">
+                        <img class="fotos" src="${p.images[0]}" alt="">
+                    </a>
+                    <h3>${p.title}</h3>
+                    <p>${p.description}</p>
+                    <h4>${p.price}</h4>
+                    <a class="detalle" href="./product.html?id=${p.id}">Ver detalle</a>
+                </article>`
+        }
+
+        contenedor.innerHTML = infoSearch;
     })
-        .catch(function(error){
-            console.log("error" + error);
-        })
+    .catch(function (error) {
+        console.log("error" + error);
+    })
