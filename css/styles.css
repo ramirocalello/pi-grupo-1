@@ -511,6 +511,20 @@ footer {
         height: 230px;
     }
 
+    .barra{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cuenta{
+        margin-left: 100px;
+    }
+
+    #logout-link{
+        margin-right: 20px;
+    }
+
     .headerizq {
         width: 100px;
         height: 40px;
@@ -520,8 +534,7 @@ footer {
     .buscador {
         margin-right: 140px;
         width: 300px;
-        margin-top: 30px;
-
+        margin-top: 15px;
     }
 
 
@@ -567,16 +580,14 @@ footer {
         flex-direction: row;
         width: 380px;
         justify-content: flex-start;  
-
+        max-height: none;
     }
 
-    .pDestacados {
-        margin-top: 1000px;
-    }
+   
 
     .producto {
         width: 150px;
-        height: 400px;
+        height: 530px;
     }
 
 
@@ -587,6 +598,7 @@ footer {
         flex-direction: row;
         width: 380px;
         justify-content: flex-start;
+        max-height: none;
     }
 
     .footerIndex {

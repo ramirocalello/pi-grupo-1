@@ -84,7 +84,7 @@ fetch(url_product)
       for (let i = 0; i < 3; i++) {
         const element = reseñas[i];
         texto += `<div class="review">
-                    <p class="rating">${element.rating}</p>
+                    <p class="rating">Rating: ${element.rating}/5</p>
                     <p class="comentario">${element.comment}</p>
                     <p class="fecha">${element.date}</p>
                     <p class="nombreUsu">${element.reviewerName}</p>
@@ -102,7 +102,7 @@ fetch(url_product)
       tags.innerText = `Tags: ${data.tags}`;
       revieww.innerHTML = `
                         <h3>Opiniones de usuarios</h3>
-                        ${texto};`
+                        ${texto}`
       
     })
     .catch(function(error){
