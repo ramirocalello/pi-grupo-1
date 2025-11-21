@@ -1,19 +1,22 @@
 const form = document.querySelector(".formulario");
 const input = document.querySelector("#barrita")
+let barraFeedback = document.querySelector(".invalid-feedback-barra")
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
     let nombre = input.value.length;
 
     if (input.value.length == 0){
-        alert("el campo de busqueda está vacio")
-    }else if (input.value.length <= 3){
-        alert("el campo debe tener al menos tres caracteres")
+        barraFeedback.innerText = "No hay datos en este campo"
+    }else if (input.value.length < 3){
+        barraFeedback.innerText = "El campo debe tener al menos tres carácteres"
     }else{
         form.submit()
     }
 
 })
+
+barraFeedback.style.color = "red"
 
 let categorias = document.querySelector(".listaLarga")
 let url_category = `https://dummyjson.com/products/category-list`
